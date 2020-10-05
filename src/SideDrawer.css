@@ -1,0 +1,53 @@
+.drawer{
+    background: aliceblue;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70%;
+    max-width: 400px;
+    /* When toggled off:
+    /* width: 0;
+    overflow: hidden; */
+    z-index: 3;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease-in;
+    /* display: none; */
+}
+
+.drawer.open{
+    transform: translateX(0);
+    transition: transform 0.4s ease-out;
+    box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.705);
+}
+
+.drawer ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: center;
+}
+
+.drawer li{
+    margin: 0.5rem;
+    
+}
+
+.drawer li a{
+    text-decoration: none;
+    color: maroon;
+    font-size: 1.2rem;
+}
+
+.drawer li a:hover, .drawer li a:active{
+    color: palevioletred;
+    transition: all 0.2s 0.1s;
+}
+
+@media (min-width: 600px){
+    .drawer{
+        display: none;
+    }
+}
